@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Force encrypted connections
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{ENV:HTTPS} !=on
+    RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+    # Force incoming requests to use european domain (without "www" subdomain)
+    RewriteCond %{HTTP_HOST} !^peterthomashorn.eu [NC]
+    RewriteRule ^(.*)$ https://peterthomashorn.eu/$1 [L,R=301]
+
+    # Temporarily redirect legacy URLs
+    RewriteRule https://peterthomashorn\.eu/biography / [R=301,L]
+    RewriteRule https://peterthomashorn\.eu/blog / [R=301,L]
+    RewriteRule https://peterthomashorn\.eu/imprint / [R=301,L]
+    RewriteRule https://peterthomashorn\.eu/blog/creating-this-website / [R=301,L]
+    RewriteRule https://peterthomashorn\.eu/blog/software-by-people-for-people / [R=301,L]
+    RewriteRule https://peterthomashorn\.eu/blog/craft-beer-culture / [R=301,L]
+    RewriteRule https://peterthomashorn\.eu/blog/our-cats-rossi-and-rufo / [R=301,L]
+</IfModule>

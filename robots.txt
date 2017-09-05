@@ -1,0 +1,3 @@
+Sitemap: https://peterthomashorn.eu/sitemap.xml
+User-agent: *
+Disallow: /fontello/
