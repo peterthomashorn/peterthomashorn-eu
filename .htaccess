@@ -11,11 +11,11 @@
     RewriteRule ^(.*)$ https://peterthomashorn.eu/$1 [L,R=301]
 
     # Temporarily redirect legacy URLs
-    RewriteRule https://peterthomashorn\.eu/biography / [R=301,L]
-    RewriteRule https://peterthomashorn\.eu/blog / [R=301,L]
-    RewriteRule https://peterthomashorn\.eu/imprint / [R=301,L]
-    RewriteRule https://peterthomashorn\.eu/blog/creating-this-website / [R=301,L]
-    RewriteRule https://peterthomashorn\.eu/blog/software-by-people-for-people / [R=301,L]
-    RewriteRule https://peterthomashorn\.eu/blog/craft-beer-culture / [R=301,L]
-    RewriteRule https://peterthomashorn\.eu/blog/our-cats-rossi-and-rufo / [R=301,L]
+    RewriteRule biography / [R=301,L]
+    RewriteRule blog / [R=301,L]
+    RewriteRule imprint / [R=301,L]
+    RewriteRule blog/creating-this-website / [R=301,L]
+    RewriteRule blog/software-by-people-for-people / [R=301,L]
+    RewriteRule blog/craft-beer-culture / [R=301,L]
+    RewriteRule blog/our-cats-rossi-and-rufo / [R=301,L]
 </IfModule>
