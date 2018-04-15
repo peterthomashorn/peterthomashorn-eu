@@ -6,9 +6,9 @@
     RewriteCond %{ENV:HTTPS} !=on
     RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
 
-    # Force incoming requests to use european domain (without "www" subdomain)
-    RewriteCond %{HTTP_HOST} !^peterthomashorn.eu [NC]
-    RewriteRule ^(.*)$ https://peterthomashorn.eu/$1 [L,R=301]
+    # Force incoming requests to use info domain (without "www" subdomain)
+    RewriteCond %{HTTP_HOST} !^peterthomashorn.info [NC]
+    RewriteRule ^(.*)$ https://peterthomashorn.info/$1 [L,R=301]
 
     # Temporarily redirect legacy URLs
     RewriteRule biography / [R=301,L]
