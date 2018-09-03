@@ -1,7 +1,7 @@
 body {
   background-color: black;
   font-family: sans-serif;
-  line-height: 1.6rem;
+  line-height: 160%;
 }
 
 body,
@@ -12,7 +12,7 @@ a {
 h1,
 h2 {
   color: white;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 main {
@@ -42,6 +42,12 @@ main {
 
 .gutter {
   margin: 0 0.5rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 300;
 }
 
 @media (min-width: 40rem) {
