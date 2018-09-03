@@ -16,10 +16,12 @@ h2 {
 }
 
 main {
-  background-color: #202020;
+  background-color: #141414;
 }
 
 .header {
+  background-image: url(header.jpg);
+  background-size: cover;
 }
 
 .section {
