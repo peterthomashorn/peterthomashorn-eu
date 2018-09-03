@@ -1,0 +1,50 @@
+body {
+  background-color: black;
+  font-family: sans-serif;
+  line-height: 1.6rem;
+}
+
+body,
+a {
+  color: #eaeaea;
+}
+
+h1,
+h2 {
+  color: white;
+  font-weight: 300;
+}
+
+main {
+  background-color: #202020;
+}
+
+.header {
+}
+
+.section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer {
+  font-size: 80%;
+  color: #808080;
+  text-align: center;
+}
+
+.wrap {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.gutter {
+  margin: 0 0.5rem;
+}
+
+@media (min-width: 40rem) {
+  .header {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
