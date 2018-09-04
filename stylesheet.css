@@ -48,7 +48,7 @@ main {
 }
 
 .header {
-  background-image: url(header.jpg);
+  background-image: url(images/header.jpg);
   background-size: cover;
   min-height: 100vh;
   border-bottom: 1px solid #303030;
