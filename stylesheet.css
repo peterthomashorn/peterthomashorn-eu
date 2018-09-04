@@ -10,6 +10,28 @@ body {
   line-height: 160%;
 }
 
+/*
+
+Headings and paragraphs should have no spacing by default to avoid mysterious gaps between elements.
+*/
+h1,
+h2,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+/*
+
+Add a consistent padding to the bottom of headings and paragraphs.
+
+*/
+h1,
+h2,
+p {
+  padding-bottom: 2rem;
+}
+
 body,
 a {
   color: #eaeaea;
@@ -29,8 +51,14 @@ main {
   background-image: url(header.jpg);
   background-size: cover;
   min-height: 100vh;
+  border-bottom: 1px solid #303030;
 }
 
+/*
+
+The first content element in the header is responsible for the top padding.
+
+*/
 .header .content-top {
   margin-top: 0;
   padding-top: 50vh;
