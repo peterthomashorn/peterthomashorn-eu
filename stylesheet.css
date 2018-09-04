@@ -1,9 +1,3 @@
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-
 body {
   background-color: black;
   font-family: sans-serif;
@@ -13,10 +7,16 @@ body {
 /*
 
 Headings and paragraphs should have no spacing by default to avoid mysterious gaps between elements.
+The other elements just for styling purposes.
+
 */
+html,
+body,
 h1,
 h2,
-p {
+p,
+.icons,
+.icon {
   padding: 0;
   margin: 0;
 }
@@ -61,7 +61,7 @@ The first content element in the header is responsible for the top padding.
 */
 .header .content-top {
   margin-top: 0;
-  padding-top: 50vh;
+  padding-top: 25vh;
 }
 
 .section {
@@ -90,10 +90,34 @@ The first content element in the header is responsible for the top padding.
   font-weight: 300;
 }
 
+.icons {
+  padding-top: 2rem;
+  list-style: none;
+  text-align: center;
+}
+
+.icons li {
+  display: inline-block;
+  line-height: 6rem;
+}
+
+.icons a {
+  padding: 1rem;
+}
+
+.icons .icon {
+  width: 4rem;
+  height: 4rem;
+}
+
 @media (min-width: 40rem) {
   .header {
     min-height: initial;
     padding-top: 10rem;
     padding-bottom: 10rem;
+  }
+
+  .header .content-top {
+    padding-top: initial;
   }
 }
