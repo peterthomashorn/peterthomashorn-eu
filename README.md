@@ -6,4 +6,5 @@ As a surprise this is made with old fashioned basics like plain HTML, vanilla CS
 
 ## Third-Party Components
 
-I use some customized icons from [Font Awesome](https://fontawesome.com). See COPYRIGHT file for further information.
+* Some customized icons from [Font Awesome](https://fontawesome.com). See COPYRIGHT file for further information.
+* The [Bebas Neue](http://bebasneue.com) web font by [Dharma Type](https://dharmatype.com).
