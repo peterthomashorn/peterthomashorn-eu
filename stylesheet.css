@@ -21,7 +21,6 @@ Base styles.
 body {
   background-color: black;
   font-family: sans-serif;
-  line-height: 160%;
 }
 
 /*
@@ -65,11 +64,15 @@ h2 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 h2 {
   font-size: 2rem;
+}
+
+p {
+  line-height: 1.6rem;
 }
 
 main {
@@ -140,6 +143,10 @@ The first content element in the header is responsible for the top padding.
 }
 
 @media (min-width: 40rem) {
+  h1 {
+    font-size: 4rem;
+  }
+
   .header {
     min-height: initial;
     padding-top: 10rem;
