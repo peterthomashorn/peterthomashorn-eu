@@ -13,6 +13,18 @@ Custom web font integration.
   font-style: normal;
 }
 
+@font-face{
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSans-Light.eot');
+    src: local('Fira Sans Light'),
+         url('../fonts/FiraSans-Light.eot') format('embedded-opentype'),
+         url("../fonts/FiraSans-Light.woff2") format("woff2"),
+         url('../fonts/FiraSans-Light.woff') format('woff'),
+         url('../fonts/FiraSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
 /*
 
 Base styles.
@@ -20,7 +32,8 @@ Base styles.
 */
 body {
   background-color: black;
-  font-family: sans-serif;
+  font-family: "Fira Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
 }
 
 /*
@@ -83,6 +96,10 @@ main {
   background-image: url(../images/header.jpg);
   background-size: cover;
   min-height: 100vh;
+}
+
+.header,
+.section {
   border-bottom: 1px solid #303030;
 }
 
