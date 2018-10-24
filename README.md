@@ -8,4 +8,3 @@ As a surprise this is made with old fashioned basics like plain HTML, vanilla CS
 
 * Some customized icons from [Font Awesome](https://fontawesome.com). See COPYRIGHT file for further information
 * The [Bebas Neue](http://bebasneue.com) web font by [Dharma Type](https://dharmatype.com)
-* The image "Pink-watercolor-texture" designed by kjpargeter on [Freepik](http://www.freepik.com)

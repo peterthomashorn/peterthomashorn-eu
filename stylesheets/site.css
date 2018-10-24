@@ -31,7 +31,6 @@ Base styles.
 
 */
 body {
-  background-color: black;
   font-family: "Fira Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
 }
@@ -58,7 +57,6 @@ p,
 Add a consistent padding to the bottom of headings and paragraphs.
 
 */
-h1,
 h2,
 p {
   padding-bottom: 2rem;
@@ -77,7 +75,8 @@ h2 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  padding: 0.5rem 0 1rem 0;
 }
 
 h2 {
@@ -88,19 +87,25 @@ p {
   line-height: 1.6rem;
 }
 
-main {
-  background-color: #141414;
+.default-background {
+  background-color: black;
 }
 
 .header {
-  background-image: url(../images/header.jpg);
-  background-size: cover;
   min-height: 100vh;
+  text-align: center;
+  background: radial-gradient(ellipse closest-side, #3b3678, transparent);
 }
 
-.header,
+.portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.portrait-wrap,
 .section {
-  border-bottom: 1px solid #303030;
+  border-bottom: 1px solid #2c2c40;
 }
 
 /*
@@ -110,7 +115,10 @@ The first content element in the header is responsible for the top padding.
 */
 .header .content-top {
   margin-top: 0;
-  padding-top: 25vh;
+  padding-top: 1rem;
+  padding-bottom: 0;
+  color: #7c7c90;
+  text-align: center;
 }
 
 .section {
@@ -120,7 +128,7 @@ The first content element in the header is responsible for the top padding.
 
 .footer {
   font-size: 80%;
-  color: #808080;
+  color: #7c7c90;
   text-align: center;
 }
 
@@ -134,9 +142,9 @@ The first content element in the header is responsible for the top padding.
 }
 
 .lead {
-  font-size: 1.25rem;
-  line-height: 2rem;
   font-weight: 300;
+  padding-top: 0.5rem;
+  text-shadow: 0px 1px 8px rgba(255, 255, 255, 0.5);
 }
 
 .icons {
@@ -159,6 +167,22 @@ The first content element in the header is responsible for the top padding.
   height: 4rem;
 }
 
+/*
+
+ Devices like the iPhone 8 Plus have a pixel width of 414 in portrait mode.
+
+ */
+@media (min-width: 25rem) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .lead {
+    line-height: 2rem;
+    font-size: 1.25rem;
+  }
+}
+
 @media (min-width: 40rem) {
   h1 {
     font-size: 4rem;
@@ -166,11 +190,10 @@ The first content element in the header is responsible for the top padding.
 
   .header {
     min-height: initial;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
   }
 
   .header .content-top {
-    padding-top: initial;
+    padding-top: 5rem;
   }
 }
