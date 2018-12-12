@@ -45,6 +45,7 @@ html,
 body,
 h1,
 h2,
+h3,
 p,
 .icons,
 .icon {
@@ -58,6 +59,7 @@ Add a consistent padding to the bottom of headings and paragraphs.
 
 */
 h2,
+h3,
 p {
   padding-bottom: 2rem;
 }
@@ -68,7 +70,8 @@ a {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Bebas Neue";
   color: white;
   font-weight: normal;
@@ -81,6 +84,10 @@ h1 {
 
 h2 {
   font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 p {
