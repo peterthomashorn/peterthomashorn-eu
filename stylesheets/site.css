@@ -101,7 +101,6 @@ p {
 .header {
   min-height: 100vh;
   text-align: center;
-  background: radial-gradient(ellipse closest-side, #3b3678, transparent);
 }
 
 .portrait {
@@ -151,7 +150,6 @@ The first content element in the header is responsible for the top padding.
 .lead {
   font-weight: 300;
   padding-top: 0.5rem;
-  text-shadow: 0px 1px 8px rgba(255, 255, 255, 0.5);
 }
 
 .icons {
