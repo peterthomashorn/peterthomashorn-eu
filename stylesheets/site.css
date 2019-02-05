@@ -14,15 +14,15 @@ Custom web font integration.
 }
 
 @font-face{
-    font-family: 'Fira Sans';
-    src: url('../fonts/FiraSans-Light.eot');
-    src: local('Fira Sans Light'),
-         url('../fonts/FiraSans-Light.eot') format('embedded-opentype'),
-         url("../fonts/FiraSans-Light.woff2") format("woff2"),
-         url('../fonts/FiraSans-Light.woff') format('woff'),
-         url('../fonts/FiraSans-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
+  font-family: 'Fira Sans';
+  src: url('../fonts/FiraSans-Light.eot');
+  src: local('Fira Sans Light'),
+       url('../fonts/FiraSans-Light.eot') format('embedded-opentype'),
+       url("../fonts/FiraSans-Light.woff2") format("woff2"),
+       url('../fonts/FiraSans-Light.woff') format('woff'),
+       url('../fonts/FiraSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
 }
 
 /*
@@ -73,17 +73,27 @@ h1,
 h2,
 h3 {
   font-family: "Bebas Neue";
-  color: white;
   font-weight: normal;
+}
+
+h2,
+h3 {
+  color: white;
 }
 
 h1 {
   font-size: 2.5rem;
-  padding: 0.5rem 0 1rem 0;
+  padding: 0.5rem 0;
 }
 
 h2 {
   font-size: 2rem;
+}
+
+h2::after,
+h3::after {
+  content: '.';
+  color: #7c7c90;
 }
 
 h3 {
@@ -91,7 +101,11 @@ h3 {
 }
 
 p {
-  line-height: 1.6rem;
+  line-height: 1.75rem;
+}
+
+img {
+  max-width: 100%;
 }
 
 .default-background {
@@ -99,32 +113,31 @@ p {
 }
 
 .header {
-  min-height: 100vh;
+  background-color: white;
+  color: black;
   text-align: center;
 }
 
-.portrait {
-  display: block;
-  width: 100%;
-  height: auto;
+.header p {
+  padding: 0;
 }
 
-.portrait-wrap,
+.header-background-image {
+  background-image: url('../images/header.jpg');
+  background-size: cover;
+  background-position: 0% 50%;
+  min-height: 60vh;
+  max-width: 60rem;
+}
+
 .section {
   border-bottom: 1px solid #2c2c40;
 }
 
-/*
-
-The first content element in the header is responsible for the top padding.
-
-*/
 .header .content-top {
   margin-top: 0;
   padding-top: 1rem;
   padding-bottom: 0;
-  color: #7c7c90;
-  text-align: center;
 }
 
 .section {
@@ -139,7 +152,7 @@ The first content element in the header is responsible for the top padding.
 }
 
 .wrap {
-  max-width: 40rem;
+  max-width: 60rem;
   margin: 0 auto;
 }
 
@@ -172,33 +185,46 @@ The first content element in the header is responsible for the top padding.
   height: 4rem;
 }
 
-/*
-
- Devices like the iPhone 8 Plus have a pixel width of 414 in portrait mode.
-
- */
-@media (min-width: 25rem) {
-  h1 {
-    font-size: 3rem;
+@media (min-width: 48rem) {
+  .header {
+    text-align: left;
   }
 
-  .lead {
-    line-height: 2rem;
-    font-size: 1.25rem;
+  .header-background-image {
+    min-height: initial;
+    height: 30rem;
+  }
+
+  .overlay-container {
+    position: relative;
+  }
+
+  .header-overlay {
+    position: absolute;
+    left: 25rem;
+    right: 2rem;
+    top: 6rem;
+  }
+
+  .header .gutter {
+    padding-left: 24rem;
   }
 }
 
-@media (min-width: 40rem) {
-  h1 {
-    font-size: 4rem;
-  }
-
+@media (min-width: 60rem) {
   .header {
-    min-height: initial;
-    padding-bottom: 5rem;
+    background-color: transparent;
+    padding-top: 2rem;
   }
 
-  .header .content-top {
-    padding-top: 5rem;
+  .header-background-image {
+    border-radius: 4px;
+    height: 35rem;
+  }
+
+  .header-overlay {
+    top: 9rem;
+    left: 30rem;
+    right: 2rem;
   }
 }
