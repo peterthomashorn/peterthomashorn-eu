@@ -4,25 +4,25 @@ Custom web font integration.
 
 */
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("../fonts/bebasneue-regular.eot") format("embedded-opentype"),
-       url("../fonts/bebasneue-regular.woff2") format("woff2"),
-       url("../fonts/bebasneue-regular.woff") format("woff"),
-       url("../fonts/bebasneue-regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "Bebas Neue";
+    src: url("../fonts/bebasneue-regular.eot") format("embedded-opentype"),
+    url("../fonts/bebasneue-regular.woff2") format("woff2"),
+    url("../fonts/bebasneue-regular.woff") format("woff"),
+    url("../fonts/bebasneue-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face{
-  font-family: 'Fira Sans';
-  src: url('../fonts/FiraSans-Light.eot');
-  src: local('Fira Sans Light'),
-       url('../fonts/FiraSans-Light.eot') format('embedded-opentype'),
-       url("../fonts/FiraSans-Light.woff2") format("woff2"),
-       url('../fonts/FiraSans-Light.woff') format('woff'),
-       url('../fonts/FiraSans-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSans-Light.eot');
+    src: local('Fira Sans Light'),
+    url('../fonts/FiraSans-Light.eot') format('embedded-opentype'),
+    url("../fonts/FiraSans-Light.woff2") format("woff2"),
+    url('../fonts/FiraSans-Light.woff') format('woff'),
+    url('../fonts/FiraSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
 }
 
 /*
@@ -31,8 +31,8 @@ Base styles.
 
 */
 body {
-  font-family: "Fira Sans", "Helvetica Neue", sans-serif;
-  font-weight: 300;
+    font-family: "Fira Sans", "Helvetica Neue", sans-serif;
+    font-weight: 300;
 }
 
 /*
@@ -49,8 +49,8 @@ h3,
 p,
 .icons,
 .icon {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 /*
@@ -61,170 +61,170 @@ Add a consistent padding to the bottom of headings and paragraphs.
 h2,
 h3,
 p {
-  padding-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 body,
 a {
-  color: #eaeaea;
+    color: #eaeaea;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Bebas Neue";
-  font-weight: normal;
+    font-family: "Bebas Neue";
+    font-weight: normal;
 }
 
 h2,
 h3 {
-  color: white;
+    color: white;
 }
 
 h1 {
-  font-size: 2.5rem;
-  padding: 0.5rem 0;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
 }
 
 h2 {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 h2::after,
 h3::after {
-  content: '.';
-  color: #7c7c90;
+    content: '.';
+    color: #7c7c90;
 }
 
 h3 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 p {
-  line-height: 1.75rem;
+    line-height: 1.75rem;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 .default-background {
-  background-color: black;
+    background-color: black;
 }
 
 .header {
-  background-color: white;
-  color: black;
-  text-align: center;
+    background-color: white;
+    color: black;
+    text-align: center;
 }
 
 .header p {
-  padding: 0;
+    padding: 0;
 }
 
 .header-background-image {
-  background-image: url('../images/header.jpg');
-  background-size: cover;
-  background-position: 0% 50%;
-  min-height: 60vh;
-  max-width: 60rem;
+    background-image: url('../images/header.jpg');
+    background-size: cover;
+    background-position: 0% 50%;
+    min-height: 60vh;
+    max-width: 60rem;
 }
 
 .section {
-  border-bottom: 1px solid #2c2c40;
+    border-bottom: 1px solid #2c2c40;
 }
 
 .header .content-top {
-  margin-top: 0;
-  padding-top: 1rem;
-  padding-bottom: 0;
+    margin-top: 0;
+    padding-top: 1rem;
+    padding-bottom: 0;
 }
 
 .section {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .footer {
-  font-size: 80%;
-  color: #7c7c90;
-  text-align: center;
+    font-size: 80%;
+    color: #7c7c90;
+    text-align: center;
 }
 
 .wrap {
-  max-width: 60rem;
-  margin: 0 auto;
+    max-width: 60rem;
+    margin: 0 auto;
 }
 
 .gutter {
-  margin: 0 0.5rem;
+    margin: 0 0.5rem;
 }
 
 .lead {
-  font-weight: 300;
-  padding-top: 0.5rem;
+    font-weight: 300;
+    padding-top: 0.5rem;
 }
 
 .icons {
-  padding-top: 2rem;
-  list-style: none;
-  text-align: center;
+    padding-top: 2rem;
+    list-style: none;
+    text-align: center;
 }
 
 .icons li {
-  display: inline-block;
-  line-height: 6rem;
+    display: inline-block;
+    line-height: 6rem;
 }
 
 .icons a {
-  padding: 1rem;
+    padding: 1rem;
 }
 
 .icons .icon {
-  width: 4rem;
-  height: 4rem;
+    width: 4rem;
+    height: 4rem;
 }
 
 @media (min-width: 48rem) {
-  .header {
-    text-align: left;
-  }
+    .header {
+        text-align: left;
+    }
 
-  .header-background-image {
-    min-height: initial;
-    height: 30rem;
-  }
+    .header-background-image {
+        min-height: initial;
+        height: 30rem;
+    }
 
-  .overlay-container {
-    position: relative;
-  }
+    .overlay-container {
+        position: relative;
+    }
 
-  .header-overlay {
-    position: absolute;
-    left: 25rem;
-    right: 2rem;
-    top: 6rem;
-  }
-
-  .header .gutter {
-    padding-left: 24rem;
-  }
+    .header-overlay {
+        position: absolute;
+        left: 25rem;
+        right: 2rem;
+        top: 6rem;
+    }
+    
+    .header .gutter {
+        padding-left: 24rem;
+    }
 }
 
 @media (min-width: 60rem) {
-  .header {
-    background-color: transparent;
-    padding-top: 2rem;
-  }
+    .header {
+        background-color: transparent;
+        padding-top: 2rem;
+    }
 
-  .header-background-image {
-    border-radius: 4px;
-    height: 35rem;
-  }
+    .header-background-image {
+        border-radius: 4px;
+        height: 35rem;
+    }
 
-  .header-overlay {
-    top: 9rem;
-    left: 30rem;
-    right: 2rem;
-  }
+    .header-overlay {
+        top: 9rem;
+        left: 30rem;
+        right: 2rem;
+    }
 }
