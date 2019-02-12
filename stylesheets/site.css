@@ -14,14 +14,21 @@ Custom web font integration.
 }
 
 @font-face{
-    font-family: 'Fira Sans';
-    src: url('../fonts/FiraSans-Light.eot');
-    src: local('Fira Sans Light'),
-    url('../fonts/FiraSans-Light.eot') format('embedded-opentype'),
+    font-family: "Fira Sans";
+    src: url("../fonts/FiraSans-Light.eot");
+    src: local("Fira Sans Light"),
+    url("../fonts/FiraSans-Light.eot") format("embedded-opentype"),
     url("../fonts/FiraSans-Light.woff2") format("woff2"),
-    url('../fonts/FiraSans-Light.woff') format('woff'),
-    url('../fonts/FiraSans-Light.ttf') format('truetype');
+    url("../fonts/FiraSans-Light.woff") format("woff"),
+    url("../fonts/FiraSans-Light.ttf") format("truetype");
     font-weight: 300;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Gloria Hallelujah";
+    src: url("../fonts/GloriaHallelujah.ttf") format("truetype");
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -72,7 +79,7 @@ a {
 h1,
 h2,
 h3 {
-    font-family: "Bebas Neue";
+    font-family: "Bebas Neue", Helvetica, sans-serif;
     font-weight: normal;
 }
 
@@ -92,7 +99,7 @@ h2 {
 
 h2::after,
 h3::after {
-    content: '.';
+    content: ".";
     color: #7c7c90;
 }
 
@@ -100,7 +107,8 @@ h3 {
     font-size: 1.5rem;
 }
 
-p {
+p,
+li {
     line-height: 1.75rem;
 }
 
@@ -123,9 +131,9 @@ img {
 }
 
 .header-background-image {
-    background-image: url('../images/header.jpg');
+    background-image: url("../images/header.jpg");
     background-size: cover;
-    background-position: 0% 50%;
+    background-position: 0 50%;
     min-height: 60vh;
     max-width: 60rem;
 }
@@ -143,6 +151,18 @@ img {
 .section {
     padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+.section.genealogy {
+    background: linear-gradient(to bottom, black, #141420);
+}
+
+.section.books {
+    background: linear-gradient(to top left, black, #141420);
+}
+
+.section.beer {
+    background: linear-gradient(to bottom right, black, #141420);
 }
 
 .footer {
@@ -163,6 +183,25 @@ img {
 .lead {
     font-weight: 300;
     padding-top: 0.5rem;
+}
+
+.beer figure {
+    background-color: white;
+    color: #2c2c40;
+    font-size: 80%;
+    padding: 1rem;
+    transform: rotate(4deg);
+}
+
+.beer figcaption {
+    font-family: "Gloria Hallelujah", cursive;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.beer figure,
+.beer img {
+    border-radius: 2px;
 }
 
 .icons {
@@ -226,5 +265,15 @@ img {
         top: 9rem;
         left: 30rem;
         right: 2rem;
+    }
+
+    .wrap.beer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .wrap.beer .column {
+        flex-grow: 1;
+        flex-basis: 0;
     }
 }
