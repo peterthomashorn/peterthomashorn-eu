@@ -148,9 +148,15 @@ img {
     padding-bottom: 0;
 }
 
-.section {
+.section,
+.footer {
     padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+.section *:last-child,
+.footer *:last-child {
+    padding-bottom: 0;
 }
 
 .section.genealogy {
@@ -331,6 +337,11 @@ img {
         width: 4rem;
         height: 4rem;
     }
+
+    .section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
 }
 
 /*
@@ -364,5 +375,10 @@ img {
     .wrap.beer .column {
         flex-grow: 1;
         flex-basis: 0;
+    }
+
+    .section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
     }
 }
