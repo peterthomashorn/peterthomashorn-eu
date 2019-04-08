@@ -1,3 +1,4 @@
 Sitemap: https://peterthomashorn.info/sitemap.xml
 User-agent: *
 Disallow: /fontello/
+Disallow: /images/
