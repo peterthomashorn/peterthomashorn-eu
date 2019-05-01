@@ -253,6 +253,29 @@ img {
 
 /*
 
+    Section specific to books.
+
+*/
+
+.books {
+    padding: 0;
+    margin: 0;
+}
+
+.books li {
+    line-height: 1rem;
+    padding-bottom: 1rem;
+    list-style: none;
+}
+
+.books .author {
+    font-size: small;
+    color: #7c7c90;
+    padding-left: 1rem;
+}
+
+/*
+
     Section specific to beer.
 
  */
