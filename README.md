@@ -6,6 +6,5 @@ As a surprise this is made with old fashioned basics like plain HTML, vanilla CS
 
 ## Third-Party Components
 
-* Some customized icons from [Font Awesome](https://fontawesome.com). See COPYRIGHT file for further information
 * The [Bebas Neue](http://bebasneue.com) web font by [Dharma Type](https://dharmatype.com)
 * The Gloria Hallelujah web font by [Kimberly Geswein](http://www.kimberlygeswein.com)
