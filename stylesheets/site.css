@@ -257,18 +257,18 @@ img {
 
 */
 
-.books {
+.book-list {
     padding: 0;
     margin: 0;
 }
 
-.books li {
+.book-list li {
     line-height: 1rem;
     padding-bottom: 1rem;
     list-style: none;
 }
 
-.books .author {
+.book-list .author {
     font-size: small;
     color: #7c7c90;
     padding-left: 1rem;
