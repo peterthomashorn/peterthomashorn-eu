@@ -90,6 +90,7 @@ h3 {
 
 h1 {
     font-size: 2.5rem;
+    line-height: 2.5rem;
     padding: 0.5rem 0;
 }
 
@@ -124,18 +125,11 @@ img {
     background-color: white;
     color: black;
     text-align: center;
+    line-height: 0;
 }
 
 .header p {
     padding: 0;
-}
-
-.header-background-image {
-    background-image: url("../images/header.jpg");
-    background-size: cover;
-    background-position: 0 50%;
-    min-height: 60vh;
-    max-width: 60rem;
 }
 
 .section {
@@ -336,24 +330,29 @@ img {
         text-align: left;
     }
 
-    .header-background-image {
-        min-height: initial;
-        height: 30rem;
+    .header,
+    .portrait {
+        height: 40rem;
     }
 
-    .overlay-container {
+    .header .wrap {
         position: relative;
     }
-
-    .header-overlay {
-        position: absolute;
-        left: 25rem;
-        right: 2rem;
-        top: 6rem;
-    }
-    
+    .portrait,
     .header .gutter {
-        padding-left: 24rem;
+        position: absolute;
+    }
+
+    .portrait {
+        top: 0;
+        left: -8rem;
+        z-index: 0;
+    }
+
+    .header .gutter {
+        padding-top: 10rem;
+        padding-left: 50%;
+        z-index: 1;
     }
 
     .family-tree .person img {
@@ -374,22 +373,6 @@ img {
  */
 
 @media (min-width: 60rem) {
-    .header {
-        background-color: transparent;
-        padding-top: 2rem;
-    }
-
-    .header-background-image {
-        border-radius: 4px;
-        height: 35rem;
-    }
-
-    .header-overlay {
-        top: 9rem;
-        left: 30rem;
-        right: 2rem;
-    }
-
     .wrap.beer {
         display: flex;
         flex-direction: row;
