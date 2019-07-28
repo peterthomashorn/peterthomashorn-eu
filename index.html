@@ -20,29 +20,6 @@
     <link rel="icon" type="image/png" href="https://peterthomashorn.info/favicon-16x16.png" sizes="16x16" />
     <link rel="stylesheet" href="stylesheets/normalize.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/site.css">
-    <script type="text/javascript">
-    function decryptMailingAddress( s ) {
-        var n = 0;
-        var r = "";
-
-        for (var i = 0; i < s.length; i++) {
-            n = s.charCodeAt(i);
-
-            if( n >= 8364 ) {
-                n = 128;
-            }
-
-            r += String.fromCharCode(n - 1);
-        }
-
-        return r;
-    }
-
-    function navigateToEncryptedAddress(s)
-    {
-        location.href = decryptMailingAddress(s);
-    }
-    </script>
 </head>
 <body class="default-background">
     <header class="header">
@@ -274,7 +251,6 @@
                     <ul class="icons">
                         <li><a href="https://github.com/peterthomashorn" target="_blank"><img src="images/github.svg" alt="GitHub" class="icon" /></a></li>
                         <li><a href="https://www.linkedin.com/in/peterthomashorn/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" class="icon" /></a></li>
-                        <li><a href="javascript:navigateToEncryptedAddress('nbjmup;qfufsuipnbtipsoAjdmpve/dpn');"><img src="images/envelope.svg" alt="E-Mail" class="icon" /></a></li>
                     </ul>
                 </div>
             </div>
