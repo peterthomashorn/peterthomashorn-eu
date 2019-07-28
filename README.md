@@ -2,7 +2,7 @@
 
 This is the repository for the currently minimalistic implementation of my own website.
 
-As a surprise this is made with old fashioned basics like plain HTML, vanilla CSS and only a hint of clean JavaScript.
+As a surprise this is made with old fashioned basics like plain HTML and vanilla CSS.
 
 ## Third-Party Components
 
