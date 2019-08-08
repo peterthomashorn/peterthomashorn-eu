@@ -388,3 +388,18 @@ img {
         padding-bottom: 6rem;
     }
 }
+
+/*
+
+    Reveal on scroll classes
+
+ */
+
+.reveal-on-scroll {
+    opacity: 0;
+    transition: 1s opacity ease-in;
+}
+
+.reveal-on-scroll.revealed {
+    opacity: 1;
+}
