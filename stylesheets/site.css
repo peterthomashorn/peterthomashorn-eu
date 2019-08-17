@@ -247,6 +247,33 @@ img {
 
 /*
 
+    Music section specific.
+
+ */
+
+.section.music {
+    padding-top: 0;
+}
+
+.music-image-container {
+    position: relative;
+    height: 15rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.music-image-container img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    max-width: initial;
+    width: 768px;
+    margin-left: -384px;
+}
+
+/*
+
     Section specific to books.
 
 */
@@ -364,6 +391,15 @@ img {
         padding-top: 4rem;
         padding-bottom: 4rem;
     }
+
+    .music-image-container {
+        height: 20rem;
+    }
+
+    .music-image-container img {
+        width: 960px;
+        margin-left: -480px;
+    }
 }
 
 /*
@@ -386,6 +422,15 @@ img {
     .section {
         padding-top: 6rem;
         padding-bottom: 6rem;
+    }
+
+    .music-image-container {
+        height: 40rem;
+    }
+
+    .music-image-container img {
+        width: 1920px;
+        margin-left: -960px;
     }
 }
 
