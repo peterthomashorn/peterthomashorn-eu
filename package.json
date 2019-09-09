@@ -1,0 +1,26 @@
+{
+  "name": "website",
+  "description": "My personal website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peterthomashorn/website.git"
+  },
+  "author": {
+    "name": "Peter Thomas Horn",
+    "email": "",
+    "url": "https://peterthomashorn.info"
+  },
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-preset-minify": "^0.5.1",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^4.12.0",
+    "normalize.css": "^8.0.1"
+  }
+}

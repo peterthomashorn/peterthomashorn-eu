@@ -1,7 +1,7 @@
 // Set up reveal on scroll
 document.addEventListener('DOMContentLoaded', function(event) {
     const frequency = 100;
-    var candidates = Array.prototype.slice.call(document.getElementsByClassName('reveal-on-scroll'));
+    let candidates = Array.prototype.slice.call(document.getElementsByClassName('reveal-on-scroll'));
 
     const updateCandidates = function () {
         const threshold = window.scrollY + window.innerHeight;

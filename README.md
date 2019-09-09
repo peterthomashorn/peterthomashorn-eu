@@ -1,10 +1,16 @@
 # My Personal Website
 
-This is the repository for the currently minimalistic implementation of my own website.
+This is the repository for the currently simple implementation of my own website.
 
-As a surprise this is made with old fashioned basics like plain HTML and vanilla CSS.
+## Development
+
+Originally I used plain HTML, CSS and vanilla JavaScript. At some point I wanted to have features which would be time-consuming to maintain by hand. For example: cache busting URLs. So I updated the project to use Gulp for development and building.
 
 ## Third-Party Components
 
 * The [Bebas Neue](http://bebasneue.com) web font by [Dharma Type](https://dharmatype.com)
 * The Gloria Hallelujah web font by [Kimberly Geswein](http://www.kimberlygeswein.com)
+
+## License
+
+© 2018 Peter Thomas Horn, all rights reserved.
