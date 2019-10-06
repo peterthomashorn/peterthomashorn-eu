@@ -10,7 +10,8 @@ Originally I used plain HTML, CSS and vanilla JavaScript. At some point I wanted
 
 * The [Bebas Neue](http://bebasneue.com) web font by [Dharma Type](https://dharmatype.com)
 * The Gloria Hallelujah web font by [Kimberly Geswein](http://www.kimberlygeswein.com)
+* The [Fira Sans](https://github.com/bBoxType/FiraSans) web font by the [Mozilla Corporation](https://www.mozilla.org/de/)
 
 ## License
 
-© 2018 Peter Thomas Horn, all rights reserved.
+© 2019 Peter Thomas Horn, all rights reserved.
