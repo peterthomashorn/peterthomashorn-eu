@@ -12,7 +12,7 @@ function cleanBuildDirectory() {
 }
 
 function copyStaticAssets() {
-    return src('static/**/*')
+    return src('static/**/*', { dot: true })
         .pipe(dest(BUILD_DIRECTORY));
 }
 
