@@ -1,0 +1,66 @@
+.section.genealogy {
+    background: linear-gradient(to bottom, black, #141420);
+}
+
+.family-tree {
+    padding-bottom: 2rem;
+}
+
+.family-tree .generation {
+    width: 100%;
+    display: flex;
+}
+
+.family-tree .person {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.family-tree .person img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.family-tree .person::before {
+    display: block;
+    overflow: hidden;
+    content: "line";
+    color: transparent;
+    height: 1rem;
+    margin-left: 50%;
+    width: 1px;
+    background-color: $border-color;
+}
+
+.family-tree .person::after {
+    display: block;
+    overflow: hidden;
+    content: "line";
+    color: transparent;
+    height: 1rem;
+    margin-left: 50%;
+    border-bottom: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+}
+
+.family-tree .person:nth-child(even)::after {
+    margin-left: 0;
+    margin-right: 50%;
+    border-left: none;
+    border-right: 1px solid $border-color;
+}
+
+.family-tree .generation:first-child .person::before,
+.family-tree .generation:last-child .person::after {
+    display: none;
+}
+
+@media (min-width: $medium-breakpoint) {
+
+    .family-tree .person img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+}

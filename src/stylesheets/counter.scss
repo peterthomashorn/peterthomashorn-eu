@@ -1,0 +1,30 @@
+.counter-row {
+    display: flex;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.counter {
+    flex-grow: 1;
+}
+
+.counter-value,
+.counter-label {
+    text-align: center;
+}
+
+.counter-value {
+    font-size: 2rem;
+    font-family: "Bebas Neue";
+}
+
+.counter-label {
+    color: $secondary-text-color;
+}
+
+@media (min-width: $medium-breakpoint) {
+    .counter-value {
+        font-size: 4rem;
+    }
+}

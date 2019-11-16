@@ -1,0 +1,20 @@
+.section.books {
+    background: linear-gradient(to top left, black, #141420);
+}
+
+.book-list {
+    padding: 0;
+    margin: 0;
+}
+
+.book-list li {
+    line-height: 1rem;
+    padding-bottom: 1rem;
+    list-style: none;
+}
+
+.book-list .author {
+    font-size: small;
+    color: $secondary-text-color;
+    padding-left: 1rem;
+}

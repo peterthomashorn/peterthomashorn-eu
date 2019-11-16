@@ -1,0 +1,34 @@
+.section.beer {
+    background: linear-gradient(to bottom right, black, #141420);
+}
+
+.beer figure {
+    background-color: white;
+    color: $border-color;
+    font-size: 80%;
+    padding: 1rem;
+    transform: rotate(4deg);
+}
+
+.beer figcaption {
+    font-family: "Gloria Hallelujah", cursive;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.beer figure,
+.beer img {
+    border-radius: 2px;
+}
+
+@media (min-width: $large-breakpoint) {
+    .wrap.beer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .wrap.beer .column {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+}

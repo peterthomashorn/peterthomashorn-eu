@@ -1,5 +1,5 @@
 const path = require('path');
-const { src, dest, series, parallel } = require('gulp');
+const { src, dest, series, parallel, watch } = require('gulp');
 const del = require('del');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
@@ -44,6 +44,24 @@ function compileStylesheets() {
         .pipe(dest(BUILD_DIRECTORY));
 }
 
+function getBuildTasks() {
+    return parallel(copyStaticAssets, compileScripts, compileStylesheets);
+}
+
+function getCleanAndBuildTasks() {
+    return series(cleanBuildDirectory, getBuildTasks());
+}
+
+function waitForChanges() {
+    const directories = [
+        'src/**/*',
+        'static/**/*'
+    ];
+
+    return watch(directories, getCleanAndBuildTasks());
+}
+
 exports.clean = cleanBuildDirectory;
-exports.build = parallel(copyStaticAssets, compileScripts, compileStylesheets);
-exports.default = series(cleanBuildDirectory, exports.build);
+exports.build = getBuildTasks();
+exports.default = getCleanAndBuildTasks();
+exports.watch = waitForChanges;

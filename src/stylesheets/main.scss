@@ -1,10 +1,15 @@
 @import "normalize";
 @import "fonts";
 
+// Colors
 $primary-text-color: #eaeaea;
 $secondary-text-color: #7c7c90;
 $heading-color: white;
 $border-color: #2c2c40;
+
+// Breakpoints
+$medium-breakpoint: 48rem;
+$large-breakpoint: 60rem;
 
 /*
 
@@ -132,18 +137,6 @@ noscript {
     padding-bottom: 0;
 }
 
-.section.genealogy {
-    background: linear-gradient(to bottom, black, #141420);
-}
-
-.section.books {
-    background: linear-gradient(to top left, black, #141420);
-}
-
-.section.beer {
-    background: linear-gradient(to bottom right, black, #141420);
-}
-
 .footer {
     font-size: 80%;
     color: $secondary-text-color;
@@ -166,174 +159,14 @@ noscript {
     padding-top: 0.5rem;
 }
 
-/*
+@import "counter";
+@import "genealogy";
+@import "music";
+@import "books";
+@import "beer";
+@import "socialmedia";
 
-    Genealogy section.
-
- */
-
-.family-tree {
-    padding-bottom: 2rem;
-}
-
-.family-tree .generation {
-    width: 100%;
-    display: flex;
-}
-
-.family-tree .person {
-    flex-grow: 1;
-    text-align: center;
-}
-
-.family-tree .person img {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-}
-
-.family-tree .person::before {
-    display: block;
-    overflow: hidden;
-    content: "line";
-    color: transparent;
-    height: 1rem;
-    margin-left: 50%;
-    width: 1px;
-    background-color: $border-color;
-}
-
-.family-tree .person::after {
-    display: block;
-    overflow: hidden;
-    content: "line";
-    color: transparent;
-    height: 1rem;
-    margin-left: 50%;
-    border-bottom: 1px solid $border-color;
-    border-left: 1px solid $border-color;
-}
-
-.family-tree .person:nth-child(even)::after {
-    margin-left: 0;
-    margin-right: 50%;
-    border-left: none;
-    border-right: 1px solid $border-color;
-}
-
-.family-tree .generation:first-child .person::before,
-.family-tree .generation:last-child .person::after {
-    display: none;
-}
-
-/*
-
-    Music section specific.
-
- */
-
-.section.music {
-    padding-top: 0;
-}
-
-.music-image-container {
-    position: relative;
-    height: 15rem;
-    width: 100%;
-    max-width: 100%;
-}
-
-.music-image-container img {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    z-index: -1;
-    max-width: initial;
-    width: 768px;
-    margin-left: -384px;
-}
-
-/*
-
-    Section specific to books.
-
-*/
-
-.book-list {
-    padding: 0;
-    margin: 0;
-}
-
-.book-list li {
-    line-height: 1rem;
-    padding-bottom: 1rem;
-    list-style: none;
-}
-
-.book-list .author {
-    font-size: small;
-    color: $secondary-text-color;
-    padding-left: 1rem;
-}
-
-/*
-
-    Section specific to beer.
-
- */
-
-.beer figure {
-    background-color: white;
-    color: $border-color;
-    font-size: 80%;
-    padding: 1rem;
-    transform: rotate(4deg);
-}
-
-.beer figcaption {
-    font-family: "Gloria Hallelujah", cursive;
-    line-height: 1rem;
-    text-align: center;
-}
-
-.beer figure,
-.beer img {
-    border-radius: 2px;
-}
-
-/*
-
-    Social media and other links.
-
- */
-
-.icons {
-    padding-top: 2rem;
-    list-style: none;
-    text-align: center;
-}
-
-.icons li {
-    display: inline-block;
-    line-height: 6rem;
-}
-
-.icons a {
-    padding: 1rem;
-}
-
-.icons .icon {
-    width: 4rem;
-    height: 4rem;
-}
-
-/*
-
-    Breakpoint for 768px
-
- */
-
-@media (min-width: 48rem) {
+@media (min-width: $medium-breakpoint) {
     .header {
         text-align: left;
     }
@@ -363,69 +196,17 @@ noscript {
         z-index: 1;
     }
 
-    .family-tree .person img {
-        width: 4rem;
-        height: 4rem;
-    }
-
     .section {
         padding-top: 4rem;
         padding-bottom: 4rem;
     }
-
-    .music-image-container {
-        height: 20rem;
-    }
-
-    .music-image-container img {
-        width: 960px;
-        margin-left: -480px;
-    }
 }
 
-/*
-
-    Breakpoint for 960px
-
- */
-
-@media (min-width: 60rem) {
-    .wrap.beer {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .wrap.beer .column {
-        flex-grow: 1;
-        flex-basis: 0;
-    }
-
+@media (min-width: $large-breakpoint) {
     .section {
         padding-top: 6rem;
         padding-bottom: 6rem;
     }
-
-    .music-image-container {
-        height: 40rem;
-    }
-
-    .music-image-container img {
-        width: 1920px;
-        margin-left: -960px;
-    }
 }
 
-/*
-
-    Reveal on scroll classes
-
- */
-
-.reveal-on-scroll {
-    opacity: 0;
-    transition: 1s opacity ease-in;
-}
-
-.reveal-on-scroll.revealed {
-    opacity: 1;
-}
+@import "reveal-on-scroll";
