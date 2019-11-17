@@ -4,20 +4,23 @@ const del = require('del');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
+const replace = require('gulp-replace');
 
+const SOURCE_DIRECTORY = 'src/';
 const BUILD_DIRECTORY = 'dist/';
+const STATIC_DIRECTORY = 'static/';
 
 function cleanBuildDirectory() {
     return del([BUILD_DIRECTORY + '**/*']);
 }
 
 function copyStaticAssets() {
-    return src('static/**/*', { dot: true })
+    return src(STATIC_DIRECTORY + '**/*', { dot: true })
         .pipe(dest(BUILD_DIRECTORY));
 }
 
 function compileScripts() {
-    return src('src/scripts/main.js')
+    return src(SOURCE_DIRECTORY + 'scripts/main.js')
         .pipe(sourcemaps.init())
         .pipe(babel({
             presets: [
@@ -37,15 +40,26 @@ function compileStylesheets() {
         ]
     };
 
-    return src('src/stylesheets/main.scss')
+    return src(SOURCE_DIRECTORY + 'stylesheets/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass(options).on('error', sass.logError))
         .pipe(sourcemaps.write('./'))
         .pipe(dest(BUILD_DIRECTORY));
 }
 
+/**
+ * Replace placeholders with cache busting URL parameters.
+ */
+function replaceRevisionParameters() {
+    const revisionTag = new Date().getTime();
+
+    return src([SOURCE_DIRECTORY + 'pages/**/*'])
+        .pipe(replace('?revision=0', `?revision=${revisionTag}`))
+        .pipe(dest(BUILD_DIRECTORY));
+}
+
 function getBuildTasks() {
-    return parallel(copyStaticAssets, compileScripts, compileStylesheets);
+    return series(parallel(copyStaticAssets, compileScripts, compileStylesheets), replaceRevisionParameters);
 }
 
 function getCleanAndBuildTasks() {
@@ -54,8 +68,8 @@ function getCleanAndBuildTasks() {
 
 function waitForChanges() {
     const directories = [
-        'src/**/*',
-        'static/**/*'
+        SOURCE_DIRECTORY + '**/*',
+        STATIC_DIRECTORY + '**/*'
     ];
 
     return watch(directories, getCleanAndBuildTasks());
