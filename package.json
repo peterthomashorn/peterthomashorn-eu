@@ -10,6 +10,10 @@
     "email": "",
     "url": "https://peterthomashorn.info"
   },
+  "scripts": {
+    "build": "gulp",
+    "test": "mocha"
+  },
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -22,6 +26,8 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
+    "jsdom": "^15.2.1",
+    "mocha": "^6.2.2",
     "node-sass": "^4.12.0",
     "normalize.css": "^8.0.1"
   }
