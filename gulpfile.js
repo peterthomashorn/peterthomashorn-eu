@@ -5,6 +5,7 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const replace = require('gulp-replace');
+const browserSync = require('browser-sync').create();
 
 const SOURCE_DIRECTORY = 'src/';
 const BUILD_DIRECTORY = 'dist/';
@@ -66,16 +67,20 @@ function getCleanAndBuildTasks() {
     return series(cleanBuildDirectory, getBuildTasks());
 }
 
-function waitForChanges() {
+function serveAutomaticallyReloadingPreview() {
+    browserSync.init({
+        server: {
+            baseDir: BUILD_DIRECTORY
+        }
+    });
+
     const directories = [
         SOURCE_DIRECTORY + '**/*',
         STATIC_DIRECTORY + '**/*'
     ];
 
-    return watch(directories, getCleanAndBuildTasks());
+    return watch(directories, series(getCleanAndBuildTasks(), browserSync.reload));
 }
 
-exports.clean = cleanBuildDirectory;
-exports.build = getBuildTasks();
 exports.default = getCleanAndBuildTasks();
-exports.watch = waitForChanges;
+exports.develop = serveAutomaticallyReloadingPreview;
