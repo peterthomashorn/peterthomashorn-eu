@@ -3,7 +3,6 @@ const { src, dest, series, parallel, watch } = require('gulp');
 const del = require('del');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
-const babel = require('gulp-babel');
 const replace = require('gulp-replace');
 const browserSync = require('browser-sync').create();
 
@@ -17,19 +16,6 @@ function cleanBuildDirectory() {
 
 function copyStaticAssets() {
     return src(STATIC_DIRECTORY + '**/*', { dot: true })
-        .pipe(dest(BUILD_DIRECTORY));
-}
-
-function compileScripts() {
-    return src(SOURCE_DIRECTORY + 'scripts/main.js')
-        .pipe(sourcemaps.init())
-        .pipe(babel({
-            presets: [
-                '@babel/env',
-                'minify'
-            ]
-        }))
-        .pipe(sourcemaps.write('./'))
         .pipe(dest(BUILD_DIRECTORY));
 }
 
@@ -60,7 +46,7 @@ function replaceRevisionParameters() {
 }
 
 function getBuildTasks() {
-    return series(parallel(copyStaticAssets, compileScripts, compileStylesheets), replaceRevisionParameters);
+    return series(parallel(copyStaticAssets, compileStylesheets), replaceRevisionParameters);
 }
 
 function getCleanAndBuildTasks() {
