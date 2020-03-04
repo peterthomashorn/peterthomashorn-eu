@@ -65,7 +65,12 @@ function serveAutomaticallyReloadingPreview() {
         STATIC_DIRECTORY + '**/*'
     ];
 
-    return watch(directories, series(getCleanAndBuildTasks(), browserSync.reload));
+    const reload = function (cb) {
+        browserSync.reload();
+        cb();
+    }
+
+    return watch(directories, series(getCleanAndBuildTasks(), reload));
 }
 
 exports.default = getCleanAndBuildTasks();
