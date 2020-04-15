@@ -1,0 +1,44 @@
+.navigation-bar {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	text-align: center;
+}
+
+.navigation-list {
+	margin: 0;
+	padding: 0;
+}
+
+.navigation-item {
+	display: inline;
+}
+
+.navigation-item a {
+	display: inline-block;
+	font-family: "Bebas Neue", Helvetica, sans-serif;
+	font-size: 1.25rem;
+	padding: 1rem;
+	text-decoration: none;
+	text-shadow: 1px 2px 4 px $border-color;
+}
+
+.navigation-item a:hover {
+	color: $primary-text-color;
+}
+
+.navigation-item:first-child a {
+	padding-left: 0;
+}
+
+.navigation-item:last-child a {
+	padding-right: 0;
+}
+
+@media (min-width: $medium-breakpoint) {
+	.navigation-bar {
+		text-align: right;
+	}
+
+	.navigation-item a {
+		font-size: 1.5rem;
+	}
+}

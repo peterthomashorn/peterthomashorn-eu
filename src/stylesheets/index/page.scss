@@ -1,0 +1,65 @@
+@import "sections/genealogy";
+@import "sections/music";
+@import "sections/books";
+@import "sections/beer";
+@import "sections/socialmedia";
+
+.page.index {
+	.header {
+		background-color: white;
+		color: black;
+	}
+
+	.header p {
+	    padding: 0;
+	}
+
+	.header .content-top {
+	    margin-top: 0;
+	    padding-top: 1rem;
+	    padding-bottom: 0;
+	}
+
+	.navigation-bar {
+		text-align: center;
+		border-top: 1px solid $border-color;
+		border-bottom: 1px solid $border-color;
+	}
+
+	.lead {
+	    font-weight: 300;
+	    padding-top: 0.5rem;
+	}
+
+	@media (min-width: $medium-breakpoint) {
+	    .header {
+	        text-align: left;
+	    }
+
+	    .header,
+	    .portrait {
+	        height: 40rem;
+	    }
+
+	    .header .wrap {
+	        position: relative;
+	    }
+
+	    .portrait,
+	    .header .introduction {
+	        position: absolute;
+	    }
+
+	    .portrait {
+	        top: 0;
+	        left: -8rem;
+	        z-index: 0;
+	    }
+
+	    .header .introduction {
+	        padding-top: 10rem;
+	        padding-left: 50%;
+	        z-index: 1;
+	    }
+	}
+}

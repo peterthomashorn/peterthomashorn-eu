@@ -1,0 +1,19 @@
+$transition-duration: 0.4s;
+
+.read-more {
+    display: inline-block;
+    border: 1px solid $primary-text-color;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+}
+
+.read-more:hover {
+    background-color: $primary-text-color;
+    color: $border-color;
+}
+
+.read-more,
+.read-more:hover {
+    transition: $transition-duration background-color, $transition-duration color;
+}

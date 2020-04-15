@@ -1,0 +1,21 @@
+.page.index {
+    .section.music {
+        background-image: url('images/music.jpg?revision=0');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 0%;
+        padding-top: 25rem;
+    }
+
+    @media (min-width: $medium-breakpoint) {
+        .section.music {
+            padding-top: 20rem;
+        }
+    }
+
+    @media (min-width: $large-breakpoint) {
+        .section.music {
+            padding-top: 40rem;
+        }
+    }
+}

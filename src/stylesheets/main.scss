@@ -77,14 +77,17 @@ h2 {
     font-size: 2rem;
 }
 
-h2::after,
-h3::after {
-    content: ".";
-    color: $secondary-text-color;
-}
-
 h3 {
     font-size: 1.5rem;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+    color: $secondary-text-color;
 }
 
 p,
@@ -96,34 +99,17 @@ img {
     max-width: 100%;
 }
 
-noscript {
-    padding: 4rem 1rem;
-    font-weight: bold;
-}
-
 .default-background {
     background-color: black;
 }
 
 .header {
-    background-color: white;
-    color: black;
     text-align: center;
     line-height: 0;
 }
 
-.header p {
-    padding: 0;
-}
-
 .section {
     border-bottom: 1px solid $border-color;
-}
-
-.header .content-top {
-    margin-top: 0;
-    padding-top: 1rem;
-    padding-bottom: 0;
 }
 
 .section,
@@ -132,15 +118,14 @@ noscript {
     padding-bottom: 2rem;
 }
 
-.section *:last-child,
-.footer *:last-child {
-    padding-bottom: 0;
-}
-
 .footer {
     font-size: 80%;
     color: $secondary-text-color;
     text-align: center;
+}
+
+.footer p {
+    line-height: 1.25rem;
 }
 
 .wrap {
@@ -154,48 +139,14 @@ noscript {
     margin: 0 0.5rem;
 }
 
-.lead {
-    font-weight: 300;
-    padding-top: 0.5rem;
-}
-
+@import "navigation";
 @import "counter";
-@import "genealogy";
-@import "music";
-@import "books";
-@import "beer";
-@import "socialmedia";
+@import "read-more";
+@import "index/page";
+@import "music/page";
+@import "career/page";
 
 @media (min-width: $medium-breakpoint) {
-    .header {
-        text-align: left;
-    }
-
-    .header,
-    .portrait {
-        height: 40rem;
-    }
-
-    .header .wrap {
-        position: relative;
-    }
-    .portrait,
-    .header .gutter {
-        position: absolute;
-    }
-
-    .portrait {
-        top: 0;
-        left: -8rem;
-        z-index: 0;
-    }
-
-    .header .gutter {
-        padding-top: 10rem;
-        padding-left: 50%;
-        z-index: 1;
-    }
-
     .section {
         padding-top: 4rem;
         padding-bottom: 4rem;
@@ -208,5 +159,3 @@ noscript {
         padding-bottom: 6rem;
     }
 }
-
-@import "reveal-on-scroll";

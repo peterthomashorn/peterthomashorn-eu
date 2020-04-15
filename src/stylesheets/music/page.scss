@@ -1,0 +1,34 @@
+.page.music {
+	.header {
+		background-image: url('images/music.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 0%;
+		color: white;
+		border-bottom: 1px solid $border-color;
+
+		h1 {
+			padding-top: 25vh;
+		}
+
+		.lead {
+			padding-bottom: 25vh;
+		}
+	}
+
+	.section.music {
+		background: linear-gradient(to top right, black, #141420);
+	}
+
+	@media (min-width: $medium-breakpoint) {
+	    .header {
+	        h1 {
+	        	padding-top: 10rem;
+	        }
+
+	        .lead {
+	        	padding-bottom: 10rem;
+	        }
+	    }
+	}
+}

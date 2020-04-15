@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "gulp",
-    "test": "mocha"
+    "test": "gulp && mocha"
   },
   "private": true,
   "devDependencies": {
