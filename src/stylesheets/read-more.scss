@@ -17,3 +17,9 @@ $transition-duration: 0.4s;
 .read-more:hover {
     transition: $transition-duration background-color, $transition-duration color;
 }
+
+@media print {
+	.read-more {
+		display: none;
+	}
+}

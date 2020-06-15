@@ -1,19 +1,22 @@
 .page.career {
-	.header {
-		border-bottom: 1px solid $border-color;
-		min-height: 100vh;
+	@media screen {
+		.header {
+			border-bottom: 1px solid $border-color;
+			min-height: 100vh;
 
-		h1 {
-			padding-top: 1.5rem;
+			h1 {
+				padding-top: 1.5rem;
+			}
 		}
-	}
 
-	.section.jobs {
-		background: linear-gradient(to top right, black, #141420);
+		.section.jobs {
+			background: linear-gradient(to top right, black, #141420);
+		}
 	}
 
 	.occupation-container {
 		padding-bottom: 2rem;
+		page-break-inside: avoid;
 	}
 
 	.occupation-container:first-child {
@@ -35,11 +38,13 @@
 		line-height: 1.5rem;
 	}
 
-	.occupation-range {
-		color: $secondary-text-color;
+	@media screen {
+		.occupation-range {
+			color: $secondary-text-color;
+		}
 	}
 
-	@media (min-width: $medium-breakpoint) {
+	@media screen and (min-width: $medium-breakpoint) {
 	    .header {
 			min-height: initial;
 

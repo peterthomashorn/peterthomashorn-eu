@@ -19,12 +19,14 @@
     font-family: "Bebas Neue";
 }
 
-.counter-label {
-    color: $secondary-text-color;
-}
-
 @media (min-width: $medium-breakpoint) {
     .counter-value {
         font-size: 4rem;
+    }
+}
+
+@media screen {
+    .counter-label {
+        color: $secondary-text-color;
     }
 }

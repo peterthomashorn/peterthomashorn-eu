@@ -42,3 +42,9 @@
 		font-size: 1.5rem;
 	}
 }
+
+@media print {
+	.navigation-bar {
+		display: none;
+	}
+}

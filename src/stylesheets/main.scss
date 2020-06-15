@@ -18,7 +18,14 @@ Base styles.
 */
 body {
     font-family: "Fira Sans", "Helvetica Neue", sans-serif;
-    font-weight: 300;
+
+    @media screen {
+        font-weight: 300;
+    }
+
+    @media print {
+        font-size: 11pt;
+    }
 }
 
 /*
@@ -39,6 +46,18 @@ p,
     margin: 0;
 }
 
+/* Safari does not care... */
+@page {
+    margin: 20mm 20mm 20mm 20mm;
+}
+
+/* ...so this is the compromise. */
+@media print {
+    body {
+        margin: 20mm 20mm 20mm 20mm;
+    }
+}
+
 /*
 
 Add a consistent padding to the bottom of headings and paragraphs.
@@ -50,9 +69,11 @@ p {
     padding-bottom: 2rem;
 }
 
-body,
-a {
-    color: $primary-text-color;
+@media screen {
+    body,
+    a {
+        color: $primary-text-color;
+    }
 }
 
 h1,
@@ -62,9 +83,11 @@ h3 {
     font-weight: normal;
 }
 
-h2,
-h3 {
-    color: $heading-color;
+@media screen {
+    h2,
+    h3 {
+        color: $heading-color;
+    }
 }
 
 h1 {
@@ -81,18 +104,15 @@ h3 {
     font-size: 1.5rem;
 }
 
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small {
-    color: $secondary-text-color;
-}
-
 p,
 li {
-    line-height: 1.75rem;
+    @media screen {
+        line-height: 1.75rem;
+    }
+
+    @media print {
+        line-height: 1.5rem;
+    }
 }
 
 img {
@@ -108,14 +128,16 @@ img {
     line-height: 0;
 }
 
-.section {
-    border-bottom: 1px solid $border-color;
-}
+@media screen {
+    .section {
+        border-bottom: 1px solid $border-color;   
+    }
 
-.section,
-.footer {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    .section,
+    .footer {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
 }
 
 .footer {
@@ -139,6 +161,16 @@ img {
     margin: 0 0.5rem;
 }
 
+.page-break {
+    @media screen {
+        display: none;
+    }
+
+    @media print {
+        page-break-after: always;
+    }
+}
+
 @import "navigation";
 @import "counter";
 @import "read-more";
@@ -146,14 +178,14 @@ img {
 @import "music/page";
 @import "career/page";
 
-@media (min-width: $medium-breakpoint) {
+@media screen and (min-width: $medium-breakpoint) {
     .section {
         padding-top: 4rem;
         padding-bottom: 4rem;
     }
 }
 
-@media (min-width: $large-breakpoint) {
+@media screen and (min-width: $large-breakpoint) {
     .section {
         padding-top: 6rem;
         padding-bottom: 6rem;
